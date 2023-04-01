@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The prompt() Method</h2>
+
+<p>Click the button to ask for your favorite drink.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let favDrink = prompt("What's your favorite drink?", "Coca-Cola");
+  switch(favDrink) {
+    case "Coca-Cola":
+      text = "Excellent choice. Coca-Cola is good for your soul.";
+      break;
+    case "Pepsi":
+      text = "Pepsi is my favorite too!";
+      break;
+    case "Sprite":
+      text = "Really? Are you sure the Sprite is your favorite?";
+      break;
+    default:
+      text = "I have never heard of that one..";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
